@@ -27,16 +27,21 @@ az containerapp compose create -g OllamaGroup --environment OllamaContainerappEn
 ```
 
 Once the command execution complete. You **MUST** copy and store the following URLs:
-![url](asset\url.png)
+![url](./asset/url.png)
 
+Now revise ollama container to 4 CPU and 8Gi memory for supporting the Phi3 model inference.
+
+```bash
+az containerapp update --name ollama --resource-group OllamaGroup --cpu 4 --memory 8Gi
+```
 
 ### Pull Phi3 model and Chat 
 
 Open your browser and navigate to the following URL with **ollama-webui.xxx**. Then you can see the login page.
-![login](./asset/1page.png1page.png)
+![login](./asset/1page.png)
 
 Click sigup and sign up with your email and password.
-![signup](./asset/asset/signup.png)
+![signup](./asset/signup.png)
 
 Then you can login to the app. ignore the first error message and click close.
 ![issue](./asset/issue.png) 

@@ -5,15 +5,6 @@ services:
     container_name: ollama
     ports:
       - 11434:11434
-    deploy:
-      resources:
-        limits:
-          cpus: '4'
-          memory: 8Gi
-        reservations:
-          cpus: '4'
-          memory: 8Gi
-
 
   ollama-webui:
     image: ghcr.io/ollama-webui/ollama-webui:main
@@ -22,3 +13,5 @@ services:
       - ollama
     ports:
       - 8080:8080
+    environment:
+      - 'OLLAMA_API=http://ollama:11434/api'
