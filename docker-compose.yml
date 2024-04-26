@@ -1,4 +1,4 @@
-version: '0.1'
+version: '3.8'
 services:
   ollama:
     image: ollama/ollama:latest
@@ -7,7 +7,8 @@ services:
     container_name: ollama
     deploy:
       resources:
-          cpu: 4
+        limits:
+          cpus: '4'
           memory: 8Gi
 
   ollama-webui:
@@ -18,8 +19,6 @@ services:
     ports:
       - 8080:8080
     environment:
-      - 'OLLAMA_API=http://ollama:11434/api'
-    deploy:
-      resources:
-        cpu: 0.5
-        memory: 1Gi
+      - '/ollama/api=http://ollama:11434/api'
+    networks:
+      - ollama-docker
