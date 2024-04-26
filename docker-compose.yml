@@ -5,6 +5,13 @@ services:
     container_name: ollama
     ports:
       - 11434:11434
+    resources:
+      limits:
+        cpus: '4'
+        memory: 8Gi
+      reservations:
+        cpus: '4'
+        memory: 8Gi
 
   ollama-webui:
     image: ghcr.io/ollama-webui/ollama-webui:main
