@@ -33,26 +33,26 @@ Once the command execution complete. You **MUST** copy and store the following U
 ### Pull Phi3 model and Chat 
 
 Open your browser and navigate to the following URL with **ollama-webui.xxx**. Then you can see the login page.
-![login](.\asset\1page.png)
+![login](./asset/1page.png1page.png)
 
 Click sigup and sign up with your email and password.
-![signup](.\asset\signup.png)
+![signup](./asset/asset/signup.png)
 
 Then you can login to the app. ignore the first error message and click close.
-![issue](.\asset\issue.png) 
+![issue](./asset/issue.png) 
 
 Click setting to set your ollama endpoint.
-![setting](.\asset\setting.png)
+![setting](./asset/setting.png)
 
 Repalce the URL with your **ollama.xxx** URL into the input box, except for the **api** at the end. Click **update** button on the right and then click **save** button.
-![api](.\asset\api.png)
+![api](./asset/api.png)
 
 Click **Model** tab and download phi3 model
-![pull](.\asset\pull.png)
+![pull](./asset/pull.png)
 
 Now you can select the model at the first page.
-![select](.\asset\select.png)
+![select](./asset/select.png)
 
 You can chat with Phi3 mini and share to others!
-![chat](.\asset\chat.png)
+![chat](./asset/chat.png)
 
