@@ -7,9 +7,8 @@ services:
     container_name: ollama
     deploy:
       resources:
-        limits:
-          cpus: '4'
-          memory: 8G
+          cpu: 4
+          memory: 8Gi
 
   ollama-webui:
     image: ghcr.io/ollama-webui/ollama-webui:main
@@ -22,6 +21,5 @@ services:
       - 'OLLAMA_API=http://ollama:11434/api'
     deploy:
       resources:
-        limits:
-          cpus: '0.5'
-          memory: 1G
+        cpu: 0.5
+        memory: 1Gi
